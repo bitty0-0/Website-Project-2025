@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #dbe3eb;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #333;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 14px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #00c6ff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background: white;
+    text-align: center;
+}
+
+.product-box:hover {
+    transform: translateY(-5px);
+}
+
+.product-box img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Ensures images don't get too large */
+    object-fit: contain; /* Prevents cropping */
+    border-radius: 4px;
+}
+
+.product-box h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.price {
+    color: #e44d26;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.product-box p {
+    margin: 10px 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+.buy-link {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #00c6ff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.buy-link:hover {
+    background-color: #0099cc;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #00c6ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* Stack items in a single column on small screens */
+    }
+}
